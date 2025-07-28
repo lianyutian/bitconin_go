@@ -14,6 +14,8 @@ type CLI struct {
 }
 
 // createBlockchain 创建区块链
+//
+//	go run main.go createblockchain -address Ivan
 func (cli *CLI) createBlockchain(address string) {
 	bc := CreateBlockchain(address)
 	err := bc.db.Close()
